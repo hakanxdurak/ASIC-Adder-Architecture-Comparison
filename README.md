@@ -21,4 +21,9 @@ Two gate delays for the Sum and Propagate/Generate (SPG) blocks (half adders), a
 Two gate delays (one AND gate and one OR gate) for each level of carry-lookahead (CLA) logic.
 
 This results in a total delay of:
-2+2+2+2=8 gate delays
+2+2+2+2=8 gate delays (I doubt that! -- will explain later)
+
+Results:
+Critical path delay ≈ 1.66 ns ≈ (SPG + 4BIT_CLA + 4BIT_CLA) * 2 + 2BIT_CLA
+
+Total area = 475.1 µm²
