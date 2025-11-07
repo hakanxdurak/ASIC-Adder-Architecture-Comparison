@@ -9,12 +9,6 @@ Critical path delay ≈ 4.38 ns ≈ 32 × (delay of a full adder) ≈ 32 × 14ns
 
 Total area = 154.5 µm²
 
-Carry-Lookahead Adder:
-
-Critical path delay ≈ 3.69 ns
-
-Total area = 358 µm²
-
 
 Hierarchical Carry-Lookahead Adder:(results same with carry-lookahead, will look at that!)
 
