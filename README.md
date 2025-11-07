@@ -9,6 +9,13 @@ Critical path delay ≈ 4.38 ns ≈ 32 × (delay of a full adder) ≈ 32 × 14ns
 
 Total area = 154.5 µm²
 
+Hierarchical Carry-Lookahead Adder:
+Each 4-bit carry-lookahead adder introduces a delay of 4 gate levels. Therefore, the total delay for a 32-bit adder would be 4×8=32 gate levels.
+Critical path delay ≈ 3.69 ns
+
+Total area = 358 µm²
+
+
 Multilevel Carry-Lookahead Adder:
 
 A 32-bit carry-lookahead adder is implemented as shown in the figure below.
