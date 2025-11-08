@@ -22,6 +22,6 @@ generate
   end
 endgenerate
 
-assign cout_o = carry[8];
+assign cout_o = carry[32];
 
 endmodule
