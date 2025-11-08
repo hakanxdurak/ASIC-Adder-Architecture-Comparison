@@ -41,13 +41,6 @@ module cla_logic_4bit #(
         end
     end
 
-    // Block propagate and generate
-    assign P_o = &propagate_i; // All propagate
-    assign G_o = generate_i[N-1] |
-                 (propagate_i[N-1] & generate_i[N-2]) |
-                 (propagate_i[N-1] & propagate_i[N-2] & generate_i[N-3]) |
-                 (propagate_i[N-1] & propagate_i[N-2] & propagate_i[N-3] & generate_i[N-4]); // For N=4
-
     assign carry_o = carry[N-1:1];
     assign cout_o  = carry[N];
 endmodule
