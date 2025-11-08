@@ -1,21 +1,25 @@
 module cla_logic_2bit (
-    input  logic [1:0] propagate_i,
-    input  logic [1:0] generate_i ,
-    input  logic       cin_i      ,
-    output logic [1:0] carry_o    ,  
-    output logic       cout_o
+    input  logic [1:0] propagate_i, // P signals
+    input  logic [1:0] generate_i,  // G signals
+    output logic [1:0] carry_o,     // Internal carries
+    output logic       cout_o       // Final carry
 );
     logic [2:0] carry;
-    assign carry[0] = cin_i;
 
-    genvar i;
-    generate
-        for (i = 0; i < 2; i++) begin : CLA_LOOP
-            assign carry[i+1] = generate_i[i] || (propagate_i[i] && carry[i]);
-        end
-    endgenerate
+    always_comb begin
+        carry[0] = 1'b0; // Initial carry is zero
 
-    assign carry_o = carry[2:1]; 
+        // Full CLA formula for 2 bits:
+        // C1 = G0 + P0*C0
+        carry[1] = generate_i[0] |
+                   (propagate_i[0] & carry[0]);
+
+        // C2 = G1 + P1*G0 + P1*P0*C0
+        carry[2] = generate_i[1] |
+                   (propagate_i[1] & generate_i[0]) |
+                   (propagate_i[1] & propagate_i[0] & carry[0]);
+    end
+
+    assign carry_o = carry[2:1];
     assign cout_o  = carry[2];
-
 endmodule
