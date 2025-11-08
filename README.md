@@ -19,7 +19,7 @@ Total area = 546.1 µm²
 Hierarchical Carry-Lookahead Adder
 
 Each 4-bit carry-lookahead adder introduces a delay of 4 gate levels. Therefore, the total delay for a 32-bit adder would be 4×8=32 gate levels.
-Critical path delay ≈ 3.69 ns
+Critical path delay ≈ 3.71 ns
 
 Total area = 358 µm²
 
