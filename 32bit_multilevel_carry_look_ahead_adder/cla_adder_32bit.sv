@@ -10,7 +10,7 @@ module cla_adder_32bit (
     
     genvar i;
     generate
-        for (i = 0; i < 2; i++) begin : CLA_16BIT_BLOCKS
+        for (i = 0; i < 2; i++) begin 
             cla_adder_16bit CLA_ADDER_16BIT (
                 .a_i   (a_i[(i*16)+15 : i*16]                  ),
                 .b_i   (b_i[(i*16)+15 : i*16]                  ),
@@ -26,7 +26,6 @@ module cla_adder_32bit (
     cla_logic_2bit CLA_LOGIC_2BIT (
         .propagate_i(P_block        ),
         .generate_i (G_block        ),
-        .cin_i      (cin_i          ),
         .carry_o    (lookahead_carry), 
         .cout_o     (cout_o         )
     );
