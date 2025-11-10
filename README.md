@@ -1,3 +1,6 @@
+<img width="500" height="101" alt="image" src="https://github.com/user-attachments/assets/8cc3544e-f8e6-4693-94d4-9361e41f7e85" />
+
+
 Carry-Ripple Adder:
 
 A 32-bit carry-ripple adder is implemented by cascading eight stages, each using two levels of logic.
