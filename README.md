@@ -1,4 +1,5 @@
-<img width="500" height="101" alt="image" src="https://github.com/user-attachments/assets/8cc3544e-f8e6-4693-94d4-9361e41f7e85" />
+<img width="500" height="121" alt="image" src="https://github.com/user-attachments/assets/dbab9374-189a-4088-85fe-3787c0b97703" />
+
 
 
 Carry-Ripple Adder:
