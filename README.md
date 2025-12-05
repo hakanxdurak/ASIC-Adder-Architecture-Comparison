@@ -1,8 +1,8 @@
-<img width="547" height="161" alt="image" src="https://github.com/user-attachments/assets/aa852deb-3de3-4e7d-8ff4-f7b9d4ccc66f" />
+<img width="547" height="181" alt="image" src="https://github.com/user-attachments/assets/f22d2746-2d7c-4f5a-bce3-b4c87288e286" />
 
 
 Adder Tradd-off Graph: 
-<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/0b6ff474-02df-473a-b57f-6bd170121232" />
+<img width="1200" height="900" alt="image" src="https://github.com/user-attachments/assets/d8066c6d-0b31-4056-8a73-3bec5a5d4c5f" />
 
 
 Carry-Ripple Adder:
