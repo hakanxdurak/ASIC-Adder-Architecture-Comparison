@@ -13,9 +13,8 @@ module bk_adder_32bit (
   assign p0 = a_i ^ b_i;
 
   // ---------------------------------------
-  // Upsweep: compute partial prefixes at Brent–Kung nodes
-  // ---------------------------------------
   // Span 1: nodes at odd indices
+  // ---------------------------------------
   logic [31:0] G1, P1;
   generate
     for (genvar i = 1; i < 32; i += 2) begin
@@ -23,8 +22,10 @@ module bk_adder_32bit (
       assign P1[i] = p0[i] & p0[i-1];
     end
   endgenerate
-
+  
+  // ---------------------------------------
   // Span 2: nodes at indices 3,7,11,...,31
+  // ---------------------------------------
   logic [31:0] G2, P2;
   generate
     for (genvar i = 3; i < 32; i += 4) begin
@@ -32,8 +33,10 @@ module bk_adder_32bit (
       assign P2[i] = P1[i] & P1[i-2];
     end
   endgenerate
-
+  
+  // ---------------------------------------
   // Span 4: nodes at 7,15,23,31
+  // ---------------------------------------
   logic [31:0] G3, P3;
   generate
     for (genvar i = 7; i < 32; i += 8) begin
@@ -41,8 +44,10 @@ module bk_adder_32bit (
       assign P3[i] = P2[i] & P2[i-4];
     end
   endgenerate
-
+  
+  // ---------------------------------------
   // Span 8: nodes at 15,31
+  // ---------------------------------------
   logic [31:0] G4, P4;
   generate
     for (genvar i = 15; i < 32; i += 16) begin
@@ -50,8 +55,10 @@ module bk_adder_32bit (
       assign P4[i] = P3[i] & P3[i-8];
     end
   endgenerate
-
+  
+  // ---------------------------------------
   // Span 16: node at 31 (root)
+  // ---------------------------------------
   logic [31:0] G5, P5;
   assign G5[31] = G4[31] | (P4[31] & G4[15]);
   assign P5[31] = P4[31] & P4[15];
@@ -87,4 +94,3 @@ module bk_adder_32bit (
   assign sum_o = p0 ^ c[31:0];
 
 endmodule
-
