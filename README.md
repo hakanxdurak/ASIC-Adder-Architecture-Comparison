@@ -1,4 +1,5 @@
-<img width="567" height="205" alt="image" src="https://github.com/user-attachments/assets/6629fb84-b617-4abf-9e85-dd2dc4eed120" />
+<img width="569" height="226" alt="image" src="https://github.com/user-attachments/assets/f311c0b9-8755-4f88-802d-c4807d9320b3" />
+
 
 Adder Tradd-off Graph: 
 <img width="1200" height="900" alt="image" src="https://github.com/user-attachments/assets/d8066c6d-0b31-4056-8a73-3bec5a5d4c5f" />
